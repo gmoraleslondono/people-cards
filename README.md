@@ -1,6 +1,6 @@
 # people-cards
 
-Display information cards using using React.js, Bootstrap and [Reqres API](https://reqres.in/)
+ 🖼 Display people information cards using React.js, Bootstrap and [Reqres API](https://reqres.in/)
 
 # Resources:
 
