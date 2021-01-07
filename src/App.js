@@ -7,16 +7,29 @@ class App extends Component {
     this.state = {
       users: [],
       pageNum: 1,
+      totalPages: 0
     }
   }
 
+  // componentDidMount() {
+  //   const url = `https://reqres.in/api/users?page=${this.state.pageNum}`;
+
+  //   fetch(url)
+  //     .then(response => response.json())
+  //     // .then(response => console.log('response', response))
+  //     .then(response => this.setState({ users: response.data}))
+  // }
+
   componentDidMount() {
-    const url = `https://reqres.in/api/users?page=${this.state.pageNum}`;
+    this.changePage(this.state.pageNum)
+  }
+
+  changePage(pageNum) {
+    const url = `https://reqres.in/api/users?page=${pageNum}`;
 
     fetch(url)
       .then(response => response.json())
-      // .then(response => console.log('response', response))
-      .then(response => this.setState({ users: response.data}))
+      .then(response => this.setState({ users: response.data, pageNum: pageNum, totalPages: response.total_pages}))
   }
 
   render() {
