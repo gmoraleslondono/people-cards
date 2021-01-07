@@ -23,14 +23,21 @@ class App extends Component {
     const { users } = this.state;
 
     return (
-      <div>
-        <p>People Cards</p>
+      <div className="container">
+        <div className="jumbotron">
+          <h1 className="display-4">People Cards</h1>
+        </div>
+        <div className="users">
           {users.map((user) => (
-            <div>
-              <img src={user.avatar} alt="Person image"/>
-              <p key={user.id}>{user.email}</p>
+            <div className="card" key={user.id}>
+              <img src={user.avatar} className="card-img-top" alt={`${user.email} avatar`}/>
+              <div className="card-body">
+                <h5 className="card-title">{user.first_name} {user.last_name}</h5>
+                <p className="card-text">{user.email}</p>
+              </div>
             </div>
           ))}
+        </div>
       </div>
     )
   }
