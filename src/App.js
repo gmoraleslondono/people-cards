@@ -51,6 +51,25 @@ class App extends Component {
             </div>
           ))}
         </div>
+        <div className="btn-group" role="group" aria-label="Basic example">
+          <button
+          type="button"
+          className="btn btn-secondary"
+          disabled={this.state.pageNum === 1 ? true : false}
+          onClick={() => this.changePage(this.state.pageNum - 1)}
+          >
+            &laquo;
+          </button>
+          <button type="button" className="btn btn-secondary">{this.state.pageNum}</button>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            disabled={this.state.pageNum >= this.state.totalPages ? true : false}
+            onClick={() => this.changePage(this.state.pageNum + 1)}
+          >
+            &raquo;
+          </button>
+        </div>
       </div>
     )
   }

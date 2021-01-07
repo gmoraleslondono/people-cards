@@ -1,5 +1,9 @@
+.container {
+  text-align: center;
+}
+
 .card {
-  width: 18em;
+  max-width: 525px;
   margin: 10px;
 }
 
@@ -7,4 +11,9 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+
+.btn-group {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
