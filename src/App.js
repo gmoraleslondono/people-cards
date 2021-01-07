@@ -42,13 +42,27 @@ class App extends Component {
         </div>
         <div className="users">
           {users.map((user) => (
-            <div className="card" key={user.id}>
-              <img src={user.avatar} className="card-img-top" alt={`${user.email} avatar`}/>
-              <div className="card-body">
-                <h5 className="card-title">{user.first_name} {user.last_name}</h5>
-                <p className="card-text">{user.email}</p>
+            <div class="card mb-3" key={user.id}>
+              <div class="row g-0">
+                <div class="col-md-4">
+                <img src={user.avatar} className="card-img-top" alt={`${user.email} avatar`}/>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                  <h5 className="card-title">{user.first_name} {user.last_name}</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p className="card-text">{user.email}</p>
+                  </div>
+                </div>
               </div>
             </div>
+            // <div className="card" key={user.id}>
+            //   <img src={user.avatar} className="card-img-top" alt={`${user.email} avatar`}/>
+            //   <div className="card-body">
+            //     <h5 className="card-title">{user.first_name} {user.last_name}</h5>
+            //     <p className="card-text">{user.email}</p>
+            //   </div>
+            // </div>
           ))}
         </div>
         <div className="btn-group" role="group" aria-label="Basic example">
